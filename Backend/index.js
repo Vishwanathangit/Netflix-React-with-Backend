@@ -1,7 +1,11 @@
 const express = require("express")
 const cors = require("cors")
 const app = express()
-app.use(cors())
+app.use(cors({
+    origin: "https://netflix-react-with-backend-48qs.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+}));
 var mobile = "1234567890"
 var pass = "123"
 app.use(express.json())

@@ -42,7 +42,7 @@ const Login = () => {
 
         if (!hasError) {
             axios
-                .get(`https://netflix-react-with-backend.onrender.com/login?mobile=${email}&password=${pass}`)
+                get(`https://netflix-react-with-backend.onrender.com/login?mobile=${email}&password=${pass}, {withCredentials: true}`)
                 .then(function (data) {
                     if (data.data === true) {
                         navigate('/success');
